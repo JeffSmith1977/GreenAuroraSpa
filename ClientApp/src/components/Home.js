@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -8,7 +7,7 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Realizando las pruebas!</h1>       
+        <h1>Realizando las pruebas!</h1>
         <p>
           Solo es una prueba to your new single-page application, built with:
         </p>

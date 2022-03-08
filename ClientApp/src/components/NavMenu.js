@@ -91,29 +91,23 @@ export class NavMenu extends Component {
                   </DropdownMenu>
                 </UncontrolledDropdown>
 
-                
-                  <NavItem>
-                    <NavLink tag={Link} className="text-dark" to="/fetch-data">
-                      Portfolio
-                    </NavLink>
-                  </NavItem>
-                
+                <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/portfolio">
+                    Portfolio
+                  </NavLink>
+                </NavItem>
 
-               
-                  <NavItem>
-                    <NavLink tag={Link} className="text-dark" to="/About">
-                      About Us
-                    </NavLink>
-                  </NavItem>
-                
+                <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/About">
+                    About Us
+                  </NavLink>
+                </NavItem>
 
-               
-                  <NavItem>
-                    <NavLink tag={Link} className="text-dark" to="/Contact">
-                      Contact
-                    </NavLink>
-                  </NavItem>
-                
+                <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/Contact">
+                    Contact
+                  </NavLink>
+                </NavItem>
               </ul>
             </Collapse>
           </Container>
