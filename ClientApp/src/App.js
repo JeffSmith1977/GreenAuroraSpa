@@ -10,6 +10,7 @@ import Facialtreatments from './components/products/Facialtreatments';
 import Contact from './components/Contact';
 import Massages from './components/products/Massages';
 import About from './components/About';
+import Portfolio from './Portfolio';
 
 
 export default class App extends Component {
@@ -24,6 +25,7 @@ export default class App extends Component {
         <Route path='/products' component={Massages} />
         <Route path='/About' component={About} />      
         <Route path='/Contact' component={Contact} />
+        <Route path='/Portfolio' component={Portfolio}/>
         <Route path='/fetch-data' component={FetchData} />
       </Layout>
     );
