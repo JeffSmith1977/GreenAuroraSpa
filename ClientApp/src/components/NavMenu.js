@@ -35,13 +35,13 @@ export class NavMenu extends Component {
 
   render() {
     return (
-      <header>
+      <header className="header">
         <Navbar
           className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3"
           light
         >
           <Container>
-            <NavbarBrand tag={Link} to="/">
+            <NavbarBrand tag={Link} to="/" className="logo me-auto">
               GREEN AURA SPA
             </NavbarBrand>
             <NavbarToggler className="mr-2" />
@@ -61,7 +61,7 @@ export class NavMenu extends Component {
                   <DropdownToggle nav caret>
                     Services
                   </DropdownToggle>
-                  <DropdownMenu right>
+                  <DropdownMenu end>
                     <DropdownItem>
                       <NavItem>
                         <NavLink
