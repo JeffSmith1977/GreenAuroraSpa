@@ -11,6 +11,8 @@ import Contact from './components/Contact';
 import Massages from './components/products/Massages';
 import About from './components/About';
 import Portfolio from './Portfolio';
+import FacialWax from './components/products/FacialWax';
+import BodyWax from './components/products/BodyWax';
 
 
 export default class App extends Component {
@@ -21,11 +23,13 @@ export default class App extends Component {
       <Layout>
         <Route exact path='/' component={Home} />
         <Route path='/counter' component={Counter} />
-        <Route path='/products' component={Facialtreatments} />  
-        <Route path='/products' component={Massages} />
+        <Route path='/products' component={Facialtreatments} /> 
+        <Route path='/massage' component={Massages} /> 
+        <Route path='/facialwax' component={FacialWax} />   
+        <Route path='/bodywax' component={BodyWax} />     
         <Route path='/About' component={About} />      
         <Route path='/Contact' component={Contact} />
-        <Route path='/Portfolio' component={Portfolio}/>
+        <Route path='/Portfolio' component={Portfolio} />
         <Route path='/fetch-data' component={FetchData} />
       </Layout>
     );
