@@ -18,6 +18,16 @@ import { Container } from 'reactstrap';
 export default class App extends Component {
   static displayName = App.name;
 
+  // function UseContainer(component) {
+  //   return (
+  //     <Container>
+  //       {component}
+  //     </Container>
+  //   );
+  // }
+    
+  
+
   render () {
     return (
       <Layout>
