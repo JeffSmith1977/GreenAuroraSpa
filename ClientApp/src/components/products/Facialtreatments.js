@@ -6,6 +6,7 @@ export default function Facialtreatments() {
 
   
   const [productos, setProductos] = useState([]);
+  const [colapseId, setColapseId] = useState(0);
   const [loading, setLoading] = useState(true);
 
   const loadProduct = () => {
@@ -48,7 +49,7 @@ export default function Facialtreatments() {
 
             <Loading texto={'Cargando productos'} /> :
 
-            productos.map((producto, index) => <Card product={producto} index={index} />)          
+            productos.map((producto, index) => <Card product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} />)          
 
           }
 
