@@ -13,7 +13,7 @@ import About from './components/About';
 import Portfolio from './Portfolio';
 import FacialWax from './components/products/FacialWax';
 import BodyWax from './components/products/BodyWax';
-
+import { Container } from 'reactstrap';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -23,7 +23,7 @@ export default class App extends Component {
       <Layout>
         <Route exact path='/' component={Home} />
         <Route path='/counter' component={Counter} />
-        <Route path='/products' component={Facialtreatments} /> 
+        <Route path='/products' component={props => <Container {...props}>{<Facialtreatments {...props}/>}</Container>} /> 
         <Route path='/massage' component={Massages} /> 
         <Route path='/facialwax' component={FacialWax} />   
         <Route path='/bodywax' component={BodyWax} />     

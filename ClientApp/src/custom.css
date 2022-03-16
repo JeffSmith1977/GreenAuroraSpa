@@ -1565,6 +1565,6 @@ section {
     background-color: #fff;
 }
 
-.carousel-dark .carousel-indicators [data-bs-target] {
-    background-color: #fff;
+.carousel-dark .carousel-caption {
+    color: #fff;
 }
