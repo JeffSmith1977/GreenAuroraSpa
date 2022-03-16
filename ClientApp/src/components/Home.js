@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
-import { Slide1 } from "../svg";
+import MenuImagen from "./controls/MenuImagen";
 
-export function Home() {
+export function Home(props) {
 
   const sliders = [
     {
@@ -21,32 +21,35 @@ export function Home() {
       title: "Couples Massage",
       subtitle: "Text Pending."
     },
-  ]
+  ];
 
-    return (
-     <>  
+  
+
+  return (
+    <>
       <Carousel variant="dark" fade={true}>
 
         {
           sliders.map((slider, index) => {
 
-            const { title, subtitle, img} = slider; 
+            const { title, subtitle, img } = slider;
 
             return <Carousel.Item key={index}>
-              <img className="d-block w-100" 
+              <img className="d-block w-100"
                 src={require(`../svg/slide-${img}.jpg`).default}
                 alt="First slide" />
               <Carousel.Caption>
                 <h5>{title}</h5>
                 <p>{subtitle}</p>
               </Carousel.Caption>
-            </Carousel.Item>   
+            </Carousel.Item>
 
           })
-        }                       
+        }
 
       </Carousel>
-     </>
-    );
-  
+       <MenuImagen {...props} />
+    </>
+  );
+
 }

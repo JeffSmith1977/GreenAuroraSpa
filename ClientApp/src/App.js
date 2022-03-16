@@ -16,17 +16,7 @@ import BodyWax from './components/products/BodyWax';
 import { Container } from 'reactstrap';
 
 export default class App extends Component {
-  static displayName = App.name;
-
-  // function UseContainer(component) {
-  //   return (
-  //     <Container>
-  //       {component}
-  //     </Container>
-  //   );
-  // }
-    
-  
+  static displayName = App.name;   
 
   render () {
     return (
