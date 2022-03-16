@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const Card = ( { index, product } ) => {
+const Card = ( { index, product, colapseId, setColapseId } ) => {
 
-  const [colapseId, setColapseId] = useState(1);
+ 
 
   const { nombre, descripcionProd, precioProds } = product;
 
@@ -13,11 +13,11 @@ const Card = ( { index, product } ) => {
   return (
     <div className="accordion-item">
       <h2 className="accordion-header" id="headingOne">
-        <button onClick={() => setColapseId(1)} className={`accordion-button ${colapseId == 1 ? '' : 'collapsed'}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <button onClick={() => setColapseId(index)} className={`accordion-button ${colapseId == index ? '' : 'collapsed'}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           {nombre}
         </button>
       </h2>
-      <div id="collapseOne" className={`accordion-collapse ${colapseId == 1 ? '' : 'collapse'}`} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div id="collapseOne" className={`accordion-collapse ${colapseId == index ? '' : 'collapse'}`} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div className="accordion-body">
           <div className="card-spa">
             <img style={{ width: '100px', height: '100px' }} src="" alt="" />
