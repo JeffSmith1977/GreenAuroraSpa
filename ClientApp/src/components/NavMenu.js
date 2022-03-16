@@ -67,7 +67,7 @@ export class NavMenu extends Component {
                         <NavLink
                           tag={Link}
                           className="text-dark"
-                          to="/Products"
+                          to="/massage"
                         >
                           Massages
                         </NavLink>
@@ -85,9 +85,31 @@ export class NavMenu extends Component {
                         </NavLink>
                       </NavItem>
                     </DropdownItem>
+                    
+                    <DropdownItem>
+                      <NavItem>
+                        <NavLink
+                          tag={Link}
+                          className="text-dark"
+                          to="/facialwax"
+                        >
+                          Facial Waxing
+                        </NavLink>
+                      </NavItem>
+                    </DropdownItem> 
 
-                    <DropdownItem>Facial Waxing</DropdownItem>
-                    <DropdownItem>Body Waxing</DropdownItem>
+                    <DropdownItem>
+                      <NavItem>
+                        <NavLink
+                          tag={Link}
+                          className="text-dark"
+                          to="/Bodywax"
+                        >
+                          Body Waxing
+                        </NavLink>
+                      </NavItem>
+                    </DropdownItem>
+
                   </DropdownMenu>
                 </UncontrolledDropdown>
 

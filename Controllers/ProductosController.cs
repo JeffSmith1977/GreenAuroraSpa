@@ -20,10 +20,10 @@ namespace GreenAuraSpa.Controllers
         }
 
         [HttpGet("{action}")]
-        public IActionResult Get()
+        public IActionResult Get(int CodCategoria)
         {
            var productos = _context.Productos
-           .Include(x => x.PrecioProds).ToArray();
+           .Include(x => x.PrecioProds).Where(y => y.IdCategoria==CodCategoria).ToArray();
 
            return new JsonResult(productos);
         }

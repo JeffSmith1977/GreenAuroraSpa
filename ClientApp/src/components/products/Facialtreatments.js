@@ -11,7 +11,7 @@ export default function Facialtreatments() {
 
   const loadProduct = () => {
 
-    fetch('/api/productos/get')
+    fetch('/api/productos/get?CodCategoria=1')
     .then(resp => resp.json())
     .then(data => {
 
@@ -32,8 +32,7 @@ export default function Facialtreatments() {
 
   return (
     <div className="container">
-      <div>Facialtreatments</div>
-
+     
       <div className="section-title">
         <h2>Facial Treatments</h2>
         <p>Text Pending.</p>
