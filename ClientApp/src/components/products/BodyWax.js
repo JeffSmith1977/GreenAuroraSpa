@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Card from "../controls/Card";
+import React, { useState, useEffect, useContext } from "react";
+import { DataContext } from "../../context/SpaContext";
 import Loading from "../controls/Loading";
 
 export default function BodyWax() {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { addCart } = useContext(DataContext);
 
   const loadProduct = () => {
     fetch("/api/productos/get?CodCategoria=4")
@@ -19,7 +20,7 @@ export default function BodyWax() {
 
   useEffect(() => {
     loadProduct();
-  });
+  },[0]);
 
   return (
     <div className="container">
@@ -33,13 +34,18 @@ export default function BodyWax() {
           <Loading texto={"Cargando productos"} />
         ) : (
           productos.map((producto, index) => {
-            const { nombre, descripcionProd, precioProds } = producto;
+            const { id, nombre, descripcionProd, precioProds } = producto;
 
             const [precio1] = precioProds;
 
             const precio = precio1.precio ? precio1.precio : 0;
+
+            const addToCart = () => {
+              addCart({ id, nombre, precio, cantidad: 1 });
+            };
+
             return (
-              <div className="col">
+              <div key={index} className="col">
                 <div className="card mb-4" style={{ "min-width": "250px" }}>
                   <div className="card-header">
                     <h4 className="my-0 text-center">{producto.nombre}</h4>
@@ -50,7 +56,7 @@ export default function BodyWax() {
                       $ {precio} <span className="text-muted"></span>
                     </h3>
                   </div>
-                  <button className="btn btn-outline-primary btn-lg-block">
+                  <button onClick={addToCart} className="btn btn-outline-primary btn-lg-block">
                     Add to cart
                   </button>
                 </div>
