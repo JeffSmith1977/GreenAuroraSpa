@@ -94,7 +94,6 @@ export default function Portfolio() {
                 <a
                   className="assets/img/portfolio/portfolio-4.jpg"
                   data-gallery="portfolioGallery" */}
-                  // className="portfolio-lightbox"
                   {/* title="Card 2"
                 >
                   <i className="bx bx-plus"></i>
