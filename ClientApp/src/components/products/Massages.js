@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Card from "../controls/Card";
+import React, { useState, useEffect, useContext } from "react";
+import { DataContext } from "../../context/SpaContext";
 import Loading from "../controls/Loading";
 
 export default function Massages() {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { addCart } = useContext(DataContext);
 
   const loadProduct = () => {
     fetch("/api/productos/get?CodCategoria=2")
@@ -19,7 +20,8 @@ export default function Massages() {
 
   useEffect(() => {
     loadProduct();
-  });
+  },[0]); 
+
 
   return (
     <div className="container">
@@ -33,14 +35,22 @@ export default function Massages() {
         {loading ? (
           <Loading texto={"Cargando productos"} />
         ) : (
+         
+
           productos.map((producto, index) => {
-            const { nombre, descripcionProd, precioProds } = producto;
+            const { id, nombre, descripcionProd, precioProds } = producto;
 
             const [precio1] = precioProds;
 
             const precio = precio1.precio ? precio1.precio : 0;
+
+            const addToCart = ()=>{
+              addCart({ id, nombre, precio, cantidad: 1 });
+            }   
+
             return (
               <div
+                key={index}
                 className="col-lg-3 col-md-6 d-flex align-items-stretch"
                 data-aos="zoom-in"
                 data-aos-delay="100"
@@ -67,9 +77,10 @@ export default function Massages() {
                     </div>
                     <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                       <div className="text-center">
-                        <a className="btn btn-outline-dark mt-auto" href="#">
-                          Add to cart
-                        </a>
+                      <button onClick={addToCart}  className="btn btn-primary">Add to Cart</button>
+                        {/* <a className="btn btn-outline-dark mt-auto" href="#">
+                          Add to cart                          
+                        </a> */}
                       </div>
                     </div>
                   </div>

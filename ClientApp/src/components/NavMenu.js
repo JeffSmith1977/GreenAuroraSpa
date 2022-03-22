@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import {
   Collapse,
   Container,
@@ -14,26 +14,20 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./NavMenu.css";
+import { DataContext } from "../context/SpaContext";
+import { useState } from "react";
 
-export class NavMenu extends Component {
-  static displayName = NavMenu.name;
+export const NavMenu = ()=>{
 
-  constructor(props) {
-    super(props);
+  const { carts } = useContext(DataContext);
+ 
+  const [collapsed, setCollapsed] = useState(true);
 
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.state = {
-      collapsed: true,
-    };
-  }
+  const toggleNavbar= ()=>{
+    setCollapsed(!collapsed)
+  } 
 
-  toggleNavbar() {
-    this.setState({
-      collapsed: !this.state.collapsed,
-    });
-  }
-
-  render() {
+  
     return (
       <header className="header">
         <Navbar
@@ -47,7 +41,7 @@ export class NavMenu extends Component {
             <NavbarToggler className="mr-2" />
             <Collapse
               className="d-sm-inline-flex flex-sm-row-reverse"
-              isOpen={!this.state.collapsed}
+              isOpen={collapsed}
               navbar
             >
               <ul className="navbar-nav flex-grow">
@@ -132,7 +126,7 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                   <i className="bx bx-hot">
-                    2
+                    {carts.length}                   
                     <box-icon name='cart'></box-icon>
                   </i>
                 </NavItem>
@@ -142,5 +136,5 @@ export class NavMenu extends Component {
         </Navbar>
       </header>
     );
-  }
+  
 }
