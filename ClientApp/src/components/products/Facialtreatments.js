@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { DataContext } from "../../context/SpaContext";
 import Card from "../controls/Card";
 import Loading from "../controls/Loading";
 
@@ -8,6 +9,8 @@ export default function Facialtreatments() {
   const [productos, setProductos] = useState([]);
   const [colapseId, setColapseId] = useState(0);
   const [loading, setLoading] = useState(true);
+
+  const { addCart } = useContext(DataContext);
 
   const loadProduct = () => {
 
@@ -28,7 +31,7 @@ export default function Facialtreatments() {
 
   useEffect(() => {
     loadProduct();
-  });
+  },[0]);
 
   return (
     <div className="container">
@@ -49,7 +52,7 @@ export default function Facialtreatments() {
 
             <Loading texto={'Cargando productos'} /> :
 
-            productos.map((producto, index) => <Card product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} />)          
+            productos.map((producto, index) => <Card product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} addCart={addCart} />)          
 
           }
 

@@ -130,7 +130,12 @@ export class NavMenu extends Component {
                     Contact
                   </NavLink>
                 </NavItem>
-                
+                <NavItem>
+                  <i className="bx bx-hot">
+                    2
+                    <box-icon name='cart'></box-icon>
+                  </i>
+                </NavItem>
               </ul>
             </Collapse>
           </Container>

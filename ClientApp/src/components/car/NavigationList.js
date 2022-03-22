@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { DataContext } from '../../context/SpaContext';
+import Carditem from './CardItem';
+import Emptyitem from './EmptyItem';
 
 import TableNav from './TableNav';
 
 const NavigationList = props => {
 
     const [show, setShow] = useState(false);  
+
+    const { carts } = useContext(DataContext);
     
     const onClick = () => {
         setTimeout(() => {
             setShow(!show)
         }, 800);
     }
+
+    console.log(carts);
 
     return (
 
@@ -34,9 +41,7 @@ const NavigationList = props => {
                         </div>
 
                         <div className="setings-item">
-                            <table className="table  table-hover lf-sm-table" id="pdsTable">
-                                <TableNav onClick={onClick} />
-                            </table>
+                            { carts.length === 0 ? <Emptyitem/> : <Carditem items={carts} />  }
                         </div>
 
                         <div className="setings-item default-skin">

@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 
-const Card = ( { index, product, colapseId, setColapseId } ) => {
+const Card = ( { index, product, colapseId, setColapseId, addCart } ) => {
 
- 
+  
 
-  const { nombre, descripcionProd, precioProds } = product;
+  const { nombre, descripcionProd, precioProds, id } = product;
 
   const [ precio1 ] = precioProds;
 
   const precio = precio1.precio ? precio1.precio : 0;
+
+  const addToCart = () => addCart({ id, nombre, precio, cantidad: 1 });
 
   return (
     <div className="accordion-item">
@@ -26,7 +28,7 @@ const Card = ( { index, product, colapseId, setColapseId } ) => {
               </h4>
               <p className="card-spa-text">{descripcionProd}</p>
               <p className="card-spa-price">${ parseFloat(precio).toFixed(2)}</p>
-              <button className="btn btn-primary">Add to Cart</button>
+              <button onClick={addToCart}  className="btn btn-primary">Add to Cart</button>
             </div>
           </div>
         </div>

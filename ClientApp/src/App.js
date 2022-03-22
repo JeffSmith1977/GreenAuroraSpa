@@ -14,13 +14,15 @@ import Portfolio from './components/Portfolio';
 import FacialWax from './components/products/FacialWax';
 import BodyWax from './components/products/BodyWax';
 import { Container } from 'reactstrap';
+import DataProvider from './context/SpaContext';
 
 export default class App extends Component {
   static displayName = App.name;   
 
   render () {
     
-    return (      
+    return (         
+      <DataProvider>
         <Layout>
           <Route exact path='/' component={Home} />
           <Route path='/counter' component={Counter} />
@@ -33,6 +35,7 @@ export default class App extends Component {
           <Route path='/Portfolio' component={Portfolio} />
           <Route path='/fetch-data' component={FetchData} />
         </Layout>
+      </DataProvider>   
     );
   }
 }
