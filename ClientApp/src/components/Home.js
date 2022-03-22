@@ -36,7 +36,7 @@ export function Home(props) {
 
             return <Carousel.Item key={index}>
               <img className="d-block w-100"
-                src={require(`../svg/slide-${img}.jpg`).default}
+                src={require(`../svg/slide-${img}.jpg`)}
                 alt="First slide" />
               <Carousel.Caption>
                 <h5>{title}</h5>

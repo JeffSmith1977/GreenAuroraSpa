@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavigationList from './car/NavigationList';
 import { NavMenu } from './NavMenu';
 
 export class Layout extends Component {
@@ -7,7 +8,8 @@ export class Layout extends Component {
   render () {
     return (
       <div>
-        <NavMenu />       
+        <NavMenu />   
+        <NavigationList />    
           {this.props.children}       
       </div>
     );

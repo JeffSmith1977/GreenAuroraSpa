@@ -1575,3 +1575,131 @@ section {
 .mt-20 {
     margin-top: 20px;
 }
+
+.theme-config {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.theme-config-box {
+    margin-left: -140px;
+    position: relative;
+    z-index: 2000;
+    transition-duration: .8s
+}
+
+.theme-config-box.show {
+    margin-left: 0
+}
+
+.spin-icon {
+    box-shadow: 5px 5px 15px 1px rgba(81, 77, 92, 0.46);
+    background: #5cb875;
+    position: absolute;
+    padding: 7px 10px 7px 0;
+    border-radius: 0 10px 10px 0;
+    top: 0;
+    right: 0;
+    width: 40px;
+    color: #fff;
+    cursor: pointer;
+    line-height: .1
+}
+
+.skin-settings {
+    width: 140px;
+    margin-right: 40px;
+    background: #fff;
+    box-shadow: -1px 20px 20px 0
+}
+
+.skin-settings .title {
+    background: #efefef;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    padding: 10px 15px;
+    font-size: 12px
+}
+
+.setings-item {
+    padding: 5px 15px
+}
+
+.setings-item.skin {
+    text-align: center
+}
+
+.setings-item .switch {
+    float: right
+}
+
+.skin-name a {
+    text-transform: uppercase
+}
+
+.setings-item a {
+    color: #2d3381
+}
+
+.default-skin {
+    text-align: center
+}
+
+.default-skin {
+    font-weight: 600;
+    background: #283a49
+}
+
+.default-skin:hover {
+    background: #1e2e3d
+}
+
+.padding-left15 {
+    padding-left: 15px !important
+}
+
+.rotate {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear
+}
+
+.rotate.left {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.theme-text {
+    margin-top: 5px;
+    writing-mode: vertical-rl;
+    -webkit-text-orientation: upright;
+    text-orientation: upright;
+    margin-left: 7px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin: 0.25rem;
+}

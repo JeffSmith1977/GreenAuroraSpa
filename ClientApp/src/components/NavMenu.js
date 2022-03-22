@@ -85,7 +85,7 @@ export class NavMenu extends Component {
                         </NavLink>
                       </NavItem>
                     </DropdownItem>
-                    
+
                     <DropdownItem>
                       <NavItem>
                         <NavLink
@@ -96,7 +96,7 @@ export class NavMenu extends Component {
                           Facial Waxing
                         </NavLink>
                       </NavItem>
-                    </DropdownItem> 
+                    </DropdownItem>
 
                     <DropdownItem>
                       <NavItem>
@@ -130,6 +130,7 @@ export class NavMenu extends Component {
                     Contact
                   </NavLink>
                 </NavItem>
+                
               </ul>
             </Collapse>
           </Container>
