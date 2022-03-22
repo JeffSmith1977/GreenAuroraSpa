@@ -25,7 +25,7 @@ export default function BodyWax() {
     <div className="container">
       <div className="section-title">
         <h2>Body Wax</h2>
-        <p>Text Pending.</p>
+        <p>Green Auro Spa offers treatments that strongly focus on the largest organ of your body: your skin. Our body treatments provide relaxation, detoxification through exfoliation, hydration, massage, and noticeably softer skin.</p>
       </div>
 
       <div className="row">

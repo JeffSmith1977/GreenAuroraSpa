@@ -5,21 +5,23 @@ const MenuImagen = (props) => {
     const menus = [{
         img: 'FacialTreatments.png',
         title: "Facial Treatments",
-        subtitle: "Text Pending",
+        // subtitle: "Text Pending",
         url: "/products"
       },{
-        img: 'FacialTreatments.png',
+        img: 'Massages.png',
         title: "Massages",
-        subtitle: "Text Pending",
+        /* subtitle: "Text Pending", */
         url: "/massage"
       },{
-        img: 'FacialTreatments.png',
+        img: 'FacialWax.png',
         title: "Facial Wax",
-        subtitle: "Text Pending"
+        /* subtitle: "Text Pending" */
+        url: "/FacialWax"
       },{
-        img: 'FacialTreatments.png',
+        img: 'BodyWax.png',
         title: "Body Wax",
-        subtitle: "Text Pending"
+        /* subtitle: "Text Pending" */
+        url: "/BodyWax"
       }];
 
     const navegateTo = (url) => props.history.push({ pathname : url });  

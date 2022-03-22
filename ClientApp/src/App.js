@@ -10,7 +10,7 @@ import Facialtreatments from './components/products/Facialtreatments';
 import Contact from './components/Contact';
 import Massages from './components/products/Massages';
 import About from './components/About';
-import Portfolio from './Portfolio';
+import Portfolio from './components/Portfolio';
 import FacialWax from './components/products/FacialWax';
 import BodyWax from './components/products/BodyWax';
 import { Container } from 'reactstrap';
