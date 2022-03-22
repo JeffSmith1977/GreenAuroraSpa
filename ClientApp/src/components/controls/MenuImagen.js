@@ -36,7 +36,7 @@ const MenuImagen = (props) => {
                         return <div key={index} className="col-lg-3 col-md-6" onClick={() => navegateTo(menu.url)}>
                             <div className="card card-menu">
                                 <div className="card-img-menu">
-                                    <img className="card-img-top" src={require(`../../Images/ImagenesMenu/${menu.img}`)} alt="Card image cap" />
+                                    <img className="card-img-top" src={require(`../../Images/ImagenesMenu/${menu.img}`).default} alt="Card image cap" />
                                 </div>
                                 <div className="card-body">
                                     <h5 className="card-title">{menu.title}</h5>
