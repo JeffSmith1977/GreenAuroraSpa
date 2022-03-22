@@ -25,7 +25,8 @@ export default function FacialWax() {
     <div className="container">
       <div className="section-title">
         <h2>Facial Wax</h2>
-        <p>Text Pending.</p>
+        <p>Waxing is a popular method of removing unwanted hair. By removing hair at the root, new hair doesn’t grow back for up to eight weeks. While waxing isn’t one of our most relaxing spa treatments, it certainly helps many of our clients look great and feel more confident.</p>
+        <p>To learn more about how to get the most out of your waxing visit, simply jump to the bottom of the page.</p>
       </div>
 
       <div className="row">

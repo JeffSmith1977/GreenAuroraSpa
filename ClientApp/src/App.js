@@ -10,7 +10,7 @@ import Facialtreatments from './components/products/Facialtreatments';
 import Contact from './components/Contact';
 import Massages from './components/products/Massages';
 import About from './components/About';
-import Portfolio from './Portfolio';
+// import Portfolio from './Portfolio';
 import FacialWax from './components/products/FacialWax';
 import BodyWax from './components/products/BodyWax';
 import { Container } from 'reactstrap';
@@ -29,7 +29,7 @@ export default class App extends Component {
         <Route path='/bodywax' component={BodyWax} />     
         <Route path='/About' component={About} />      
         <Route path='/Contact' component={Contact} />
-        <Route path='/Portfolio' component={Portfolio} />
+        {/* <Route path='/Portfolio' component={Portfolio} /> */}
         <Route path='/fetch-data' component={FetchData} />
       </Layout>
     );

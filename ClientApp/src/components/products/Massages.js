@@ -26,7 +26,7 @@ export default function Massages() {
 
       <div className="section-title">
         <h2>Massages</h2>
-        <p>Text Pending.</p>
+        <p>If you’re looking for a relaxing massage near you, we have Green Aura Spa a convenient locations in New York. We offer several types of massage treatments, and each can be customized with a variety of enhancements to suit your unique needs.</p>
       </div>
 
       <div className="row">
