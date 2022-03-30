@@ -14,7 +14,7 @@ export default function BodyWax() {
         setTimeout(() => {
           setProductos(data);
           setLoading(false);
-        }, 1000);
+        }, 100);
       });
   };
 
@@ -26,7 +26,7 @@ export default function BodyWax() {
     <div className="container">
       <div className="section-title">
         <h2>Body Wax</h2>
-        <p>Green Auro Spa offers treatments that strongly focus on the largest organ of your body: your skin. Our body treatments provide relaxation, detoxification through exfoliation, hydration, massage, and noticeably softer skin.</p>
+        <p>Green Auro Spa Soffers treatments that strongly focus on the largest organ of your body: your skin. Our body treatments provide relaxation, detoxification through exfoliation, hydration, massage, and noticeably softer skin.</p>
       </div>
 
       <div className="row">
@@ -46,7 +46,7 @@ export default function BodyWax() {
 
             return (
               <div key={index} className="col">
-                <div className="card mb-4" style={{ "min-width": "250px" }}>
+                <div className="card mb-4" style={{ minWidth: "250px" }}>
                   <div className="card-header">
                     <h4 className="my-0 text-center">{producto.nombre}</h4>
                   </div>

@@ -23,7 +23,7 @@ export default function Facialtreatments() {
         setProductos(data);
         setLoading(false);
 
-      }, 1000);
+      }, 100);
 
     })
 
@@ -52,7 +52,7 @@ export default function Facialtreatments() {
 
             <Loading texto={'Cargando productos'} /> :
 
-            productos.map((producto, index) => <Card product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} addCart={addCart} />)          
+            productos.map((producto, index) => <Card key={index} product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} addCart={addCart} />)          
 
           }
 

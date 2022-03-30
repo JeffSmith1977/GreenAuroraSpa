@@ -12,7 +12,7 @@ export default function Footer() {
           </p>
           <div className="social-links">
             <a href="https://twitter.com/greenauraspa" className="twitter">
-              <i className="bx bxl-twitter"></i>
+              <i className="bx bxl-twitter"></i>  
             </a>
             <a
               href="https://www.facebook.com/greenauraspa"

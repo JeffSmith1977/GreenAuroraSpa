@@ -14,7 +14,7 @@ export default function Massages() {
         setTimeout(() => {
           setProductos(data);
           setLoading(false);
-        }, 1000);
+        }, 100);
       });
   };
 
