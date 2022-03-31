@@ -10,9 +10,9 @@ const DataProvider = ({  children }) => {
         setCarts([...carts, cart]);    
     }
 
-    const removeCart = id => {
+    const removeCart = idProducto => {
 
-        const newCarts = carts.filter(cart => cart.id !== id);
+        const newCarts = carts.filter(cart => cart.idProducto !== idProducto);
 
         setCarts(newCarts);
     }

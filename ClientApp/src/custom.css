@@ -1714,3 +1714,14 @@ section {
     border: none;
     background-color: transparent;
 }
+
+.prices-messages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prices-messages p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}

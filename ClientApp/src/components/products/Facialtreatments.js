@@ -1,37 +1,18 @@
 import React, { useState, useEffect, useContext } from "react";
 import { DataContext } from "../../context/SpaContext";
+import useProducts from "../../hooks/useProducts";
 import Card from "../controls/Card";
 import Loading from "../controls/Loading";
 
 export default function Facialtreatments() {
 
-  
-  const [productos, setProductos] = useState([]);
-  const [colapseId, setColapseId] = useState(0);
-  const [loading, setLoading] = useState(true);
-
   const { addCart } = useContext(DataContext);
+  const [colapseId, setColapseId] = useState(0);
+  
 
-  const loadProduct = () => {
+  const CodCategoria = 1;
 
-    fetch('/api/productos/get?CodCategoria=1')
-    .then(resp => resp.json())
-    .then(data => {
-
-      setTimeout(() => {
-        
-        setProductos(data);
-        setLoading(false);
-
-      }, 100);
-
-    })
-
-  }
-
-  useEffect(() => {
-    loadProduct();
-  },[0]);
+  const { productos, loading } = useProducts(CodCategoria);
 
   return (
     <div className="container">

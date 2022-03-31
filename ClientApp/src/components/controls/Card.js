@@ -4,13 +4,13 @@ const Card = ( { index, product, colapseId, setColapseId, addCart } ) => {
 
   
 
-  const { nombre, descripcionProd, precioProds, id } = product;
+  const { nombre, descripcionProd, precioProds, idProducto } = product;
 
   const [ precio1 ] = precioProds;
 
   const precio = precio1.precio ? precio1.precio : 0;
 
-  const addToCart = () => addCart({ id, nombre, precio, cantidad: 1 });
+  const addToCart = () => addCart({ idProducto, nombre, precio, cantidad: 1 });
 
   return (
     <div className="accordion-item">

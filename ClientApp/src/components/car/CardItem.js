@@ -20,8 +20,8 @@ const Carditem = ({items =[]}) => {
             </thead>
             <tbody>
                 {items.map(item => ( 
-                    <tr key={item.id}>
-                        <td> <button className='delete-item' onClick={() => removeCart(item.id)}>
+                    <tr key={item.idProducto}>
+                        <td> <button className='delete-item' onClick={() => removeCart(item.idProducto)}>
                             <i className="bi bi-phone">
                                 <box-icon name='trash' ></box-icon>
                             </i>

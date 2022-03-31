@@ -1,26 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import { DataContext } from "../../context/SpaContext";
+import useProducts from "../../hooks/useProducts";
 import Loading from "../controls/Loading";
 
 export default function FacialWax() {
-  const [productos, setProductos] = useState([]);
-  const [loading, setLoading] = useState(true);
+  
   const { addCart } = useContext(DataContext);
 
-  const loadProduct = () => {
-    fetch("/api/productos/get?CodCategoria=3")
-      .then((resp) => resp.json())
-      .then((data) => {
-        setTimeout(() => {
-          setProductos(data);
-          setLoading(false);
-        }, 100);
-      });
-  };
+  const CodCategoria = 3
 
-  useEffect(() => {
-    loadProduct();
-  }, [0]);
+  const { productos, loading } = useProducts(CodCategoria);
 
   return (
     <div className="container">
@@ -43,14 +32,14 @@ export default function FacialWax() {
           <Loading texto={"Cargando productos"} />
         ) : (
           productos.map((producto, index) => {
-            const { id, nombre, descripcionProd, precioProds } = producto;
+            const { idProducto, nombre, descripcionProd, precioProds } = producto;
 
             const [precio1] = precioProds;
 
             const precio = precio1.precio ? precio1.precio : 0;
 
             const addToCart = () => {
-              addCart({ id, nombre, precio, cantidad: 1 });
+              addCart({ idProducto, nombre, precio, cantidad: 1 });
             };
 
             return (
