@@ -1,27 +1,35 @@
-import React, { useState, useEffect,  } from "react";
-
+import React, { useState, useEffect, useContext } from "react";
+import { DataContext } from "../../context/SpaContext";
+import useProducts from "../../hooks/useProducts";
 import Loading from "../controls/Loading";
 import MessagesCard from "../controls/MessagesCard";
 
 export default function Massages() {
 
-  const [productos, setProductos] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [productos, setProductos] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  const loadProduct = () => {
-    fetch("/api/productos/get?CodCategoria=2")
-      .then((resp) => resp.json())
-      .then((data) => {
-        setTimeout(() => {
-          setProductos(data);
-          setLoading(false);
-        }, 100);
-      });
-  };
+  // const loadProduct = () => {
+  //   fetch("/api/productos/get?CodCategoria=2")
+  //     .then((resp) => resp.json())
+  //     .then((data) => {
+  //       setTimeout(() => {
+  //         setProductos(data);
+  //         setLoading(false);
+  //       }, 100);
+  //     });
+  // };
 
-  useEffect(() => {
-    loadProduct();
-  }, [0]);
+  // useEffect(() => {
+  //   loadProduct();
+  // }, [0]);
+
+  const { addCart } = useContext(DataContext);
+
+  const CodCategoria = 2
+
+  const { productos, loading } = useProducts(CodCategoria);
+
 
   return (
     <div className="container">
