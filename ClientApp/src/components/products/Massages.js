@@ -48,7 +48,7 @@ export default function Massages() {
             const addToCart = () => {
               addCart({ id, nombre, precio, cantidad: 1 });
             };
-
+            //console.log(producto);
             return (
               <div
                 key={index}
@@ -65,8 +65,8 @@ export default function Massages() {
                       Sale
                     </div>
                     <img
-                      className="card-img-top"
-                      src="assets/img/massages/Reflexology.jpg"
+                      className="card-img-top"                      
+                      src={require(`../../Images/${producto.idProducto}.png`).default}
                       alt="..."
                     />
                     <div className="card-body p-4">
