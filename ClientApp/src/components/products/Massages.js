@@ -6,24 +6,6 @@ import MessagesCard from "../controls/MessagesCard";
 
 export default function Massages() {
 
-  // const [productos, setProductos] = useState([]);
-  // const [loading, setLoading] = useState(true);
-
-  // const loadProduct = () => {
-  //   fetch("/api/productos/get?CodCategoria=2")
-  //     .then((resp) => resp.json())
-  //     .then((data) => {
-  //       setTimeout(() => {
-  //         setProductos(data);
-  //         setLoading(false);
-  //       }, 100);
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   loadProduct();
-  // }, [0]);
-
   const { addCart } = useContext(DataContext);
 
   const CodCategoria = 2

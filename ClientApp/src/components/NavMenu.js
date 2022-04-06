@@ -126,7 +126,12 @@ export const NavMenu = ()=>{
                 </NavItem>
                 <NavItem>
                   <i className="bx bx-hot">
-                    {carts.length}                   
+                    {
+                      carts.length !=0 &&
+                      <span className="counter-item">
+                        {carts.length}                   
+                      </span>
+                    }
                     <box-icon name='cart'></box-icon>
                   </i>
                 </NavItem>
