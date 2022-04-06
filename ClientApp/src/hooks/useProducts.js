@@ -21,7 +21,7 @@ const useProducts = (CodCategoria) => {
     }, [ CodCategoria ]);
 
     return {
-        productos,
+        productos,        
         loading
     }
 
