@@ -1736,3 +1736,8 @@ section {
     right: -10px;
     top: -5px;
 }
+
+.old-price {
+    text-decoration: line-through;
+    color: #c1c1c1;
+}

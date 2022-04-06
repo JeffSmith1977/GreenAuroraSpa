@@ -6,7 +6,7 @@ const Carditem = ({items =[]}) => {
     const { removeCart } = useContext(DataContext);   
 
     return (
-        <table>
+        <table style={{ width:'100%' }}>
             <thead>
                 <tr>
                     <th> 
@@ -33,6 +33,7 @@ const Carditem = ({items =[]}) => {
                     </tr>
                 ))}
             </tbody>
+            
         </table>
     );
 }
