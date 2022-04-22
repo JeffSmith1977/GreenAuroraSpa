@@ -5,6 +5,8 @@ const Carditem = ({items =[]}) => {
 
     const { removeCart } = useContext(DataContext);   
 
+    const total=items.reduce((acumulado, actual)=>acumulado +  actual.precio, 0)
+    
     return (
         <table style={{ width:'100%' }}>
             <thead>
@@ -16,7 +18,8 @@ const Carditem = ({items =[]}) => {
                     <th>Price</th>
                     <th>Qx</th>
                     <th>Total</th>
-                </tr>
+                </tr>    
+
             </thead>
             <tbody>
                 {items.map(item => ( 
@@ -34,6 +37,16 @@ const Carditem = ({items =[]}) => {
                 ))}
             </tbody>
             
+            <footer>
+                <tr>
+                    <th>
+                    </th>
+                    <th>Total to pay:</th>
+                    <td>{total}</td>
+                </tr>
+
+                
+            </footer>
         </table>
     );
 }

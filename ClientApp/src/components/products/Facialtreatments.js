@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { DataContext } from "../../context/SpaContext";
 import useProducts from "../../hooks/useProducts";
-import Card from "../controls/Card";
+import FacialtreatmentsCard from "../controls/FacialtreatmentsCard";
 import Loading from "../controls/Loading";
 
 export default function Facialtreatments() {
@@ -33,7 +33,8 @@ export default function Facialtreatments() {
 
             <Loading texto={'Cargando productos'} /> :
 
-            productos.map((producto, index) => <Card key={index} product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} addCart={addCart} />)          
+            //productos.map((producto, index) => <Card key={index} product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} addCart={addCart} />) 
+            productos.map((producto, index) => <FacialtreatmentsCard key={index} product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} addCart={addCart} />)          
 
           }
 
