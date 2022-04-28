@@ -2,14 +2,25 @@ import React, { useState } from 'react';
 
 const FacialtreatmentsCard = ( { index, product, colapseId, setColapseId, addCart } ) => {
 
-  
-  const { nombre, descripcionProd, precioProds, idProducto } = product;
+  //const { nombre, descripcionProd, precioProds, idProducto } = product;
+  const { idProducto, nombre, precioProds, descripcionProd, descuentoProds } = product;
+  const [precio, setPrecio] = useState(0)
 
-  const [ precio1 ] = precioProds;
+  // const [ precio1 ] = precioProds;
 
-  const precio = precio1.precio ? precio1.precio : 0;
+  // const precio = precio1.precio ? precio1.precio : 0;
 
-  const addToCart = () => addCart({ idProducto, nombre, precio, cantidad: 1 });
+  // const addToCart = () => addCart({ idProducto, nombre, precio, cantidad: 1 });
+
+    const [descuento] = descuentoProds;
+
+    const { porcentaje } = descuento === undefined ? { porcentaje: 0 } : descuento;
+
+    const { addCart } = useContext(DataContext);
+
+    const addToCart = () => {
+        addCart({ idProducto, nombre, precio, cantidad: 1 });
+    };
 
   return (
     <div className="accordion-item">
