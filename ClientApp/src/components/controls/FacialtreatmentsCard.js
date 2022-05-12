@@ -1,25 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { DataContext } from "../../context/SpaContext";
 
-const FacialtreatmentsCard = ( { index, product, colapseId, setColapseId, addCart } ) => {
+const FacialtreatmentsCard = ( { index, product, colapseId, setColapseId } ) => {
 
-  //const { nombre, descripcionProd, precioProds, idProducto } = product;
-  const { idProducto, nombre, precioProds, descripcionProd, descuentoProds } = product;
-  const [precio, setPrecio] = useState(0)
-
-  // const [ precio1 ] = precioProds;
-
-  // const precio = precio1.precio ? precio1.precio : 0;
-
-  // const addToCart = () => addCart({ idProducto, nombre, precio, cantidad: 1 });
-
-    const [descuento] = descuentoProds;
-
-    const { porcentaje } = descuento === undefined ? { porcentaje: 0 } : descuento;
-
+    const { idProducto, nombre, precioProds, descripcionProd, descuentoProds } = product;
+  const precio = precioProds[0].precio;
+ 
+  //console.log(product);
+  const [descuento] = descuentoProds;
+  
+  const { porcentaje } = descuento === undefined ? { porcentaje: 0 } : descuento;
+  const hasDiscount = porcentaje != "0";
+  const newPrice = (precio - (precio * (porcentaje / 100)))
+   
     const { addCart } = useContext(DataContext);
 
     const addToCart = () => {
-        addCart({ idProducto, nombre, precio, cantidad: 1 });
+        addCart({ idProducto, nombre, precio:newPrice, cantidad: 1 });
     };
 
   return (
@@ -37,7 +34,9 @@ const FacialtreatmentsCard = ( { index, product, colapseId, setColapseId, addCar
               <h4 className="card-spa-title">{nombre}
               </h4>
               <p className="card-spa-text">{descripcionProd}</p>
-              <p className="card-spa-price">${ parseFloat(precio).toFixed(2)}</p>
+              {hasDiscount && <label htmlFor={`radio-${idProducto}-${precio}`}><span className='old-price'>$ {parseFloat(precio).toFixed(2)}</span> $ {parseFloat(newPrice).toFixed(2)}</label> } 
+              {!hasDiscount && <label htmlFor={`radio-${idProducto}-${parseFloat(precio).toFixed(2)}`}> $ {parseFloat(newPrice).toFixed(2)}</label> } 
+              
               <button onClick={addToCart}  className="btn btn-primary">Add to Cart</button>
             </div>
           </div>
