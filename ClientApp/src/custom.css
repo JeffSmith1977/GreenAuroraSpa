@@ -1710,9 +1710,13 @@ section {
 }
 
 .delete-item {
-    padding: 5px;
+    padding: 0px;
+    height: 25px;
+    width: 25px;
     border: none;
+    line-height: 7px;
     background-color: transparent;
+    font-weight: bold;
 }
 
 .delete-item:hover {
