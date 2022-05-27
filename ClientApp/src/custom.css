@@ -1710,9 +1710,14 @@ section {
 }
 
 .delete-item {
-    padding: 0;
+    padding: 5px;
     border: none;
     background-color: transparent;
+}
+
+.delete-item:hover {
+    background-color: #c4c4c4;
+    color: rgb(76, 76, 76);
 }
 
 .prices-messages {
@@ -1753,4 +1758,27 @@ section {
     -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     margin-bottom: 20px;
+}
+
+.noradio {
+    border-radius: 0rem;
+}
+
+.d-flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt-bold {
+    font-weight: bold;
+}
+
+.line-top {
+    border-top: 1px solid #e6e6e6;
+    margin-top: 20px;
+}
+
+.d-flex-end {
+    display: flex;
+    justify-content: flex-end;
 }

@@ -7,7 +7,19 @@ const DataProvider = ({  children }) => {
     const [ carts, setCarts] = useState([]);
 
     const addCart = cart => {
-        setCarts([...carts, cart]);    
+
+        const exist = carts.find(item => item.idProducto === cart.idProducto);
+        if(exist){
+            const newCarts = carts.map(item => {
+                if(item.idProducto === cart.idProducto){
+                    item.cantidad += cart.cantidad;
+                }
+                return item;
+            })
+            setCarts(newCarts);
+        }else
+            setCarts([...carts, cart]);    
+
     }
 
     const removeCart = idProducto => {

@@ -89,7 +89,7 @@ export default function Portfolio() {
 
         <div className="col-lg-4 col-md-6 portfolio-item filter-card">
           <div className="portfolio-wrap">
-          <img className="card-img-top" src={require("../Images/portfolio/4.jpg").default}/> 
+          <img className="card-img-top" src={require("../Images/portfolio/4.JPG").default}/> 
             <div className="portfolio-info">
               <h4>Card 1</h4>
               <p>Card</p>
