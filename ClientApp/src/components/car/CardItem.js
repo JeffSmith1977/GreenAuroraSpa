@@ -13,7 +13,7 @@ const Carditem = ({items =[]}) => {
             {
                 items.map(item => {
                     return (
-                        <div className='d-flex-between'>
+                        <div className='d-flex-between' key={item.idProducto}>
                             <div>
                                 <div>{item.nombre}</div>
                                 <div>{item.cantidad} x <span className='txt-bold'>${round(item.precio)}</span></div>
@@ -28,6 +28,14 @@ const Carditem = ({items =[]}) => {
                 })
             }
             <div className='d-flex-between line-top'>
+                <div>Sub Total</div>
+                <div className=''>${round(total)}</div>
+            </div>
+            <div className='d-flex-between'>
+                <div>Descuento</div>
+                <div className=''>${round(0)}</div>
+            </div>
+            <div className='d-flex-between'>
                 <div>Total</div>
                 <div className='txt-bold'>${round(total)}</div>
             </div>

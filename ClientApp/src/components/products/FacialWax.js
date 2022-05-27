@@ -2,17 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { DataContext } from "../../context/SpaContext";
 import useProducts from "../../hooks/useProducts";
 import Loading from "../controls/Loading";
-import OtherProducts from "./OtherProducts";
 
-export default function FacialWax() {
-  
-  return (<div className="divider">
-      <FacialWaxContent />
-      <OtherProducts />
-    </div>);
-}
-
-function FacialWaxContent() {
+export default function FacialWax() { 
   
   const { addCart } = useContext(DataContext);
 

@@ -2,8 +2,17 @@ import React, { useState, useEffect, useContext } from "react";
 import useProducts from "../../hooks/useProducts";
 import Loading from "../controls/Loading";
 import MessagesCard from "../controls/MessagesCard";
+import OtherProducts from "./OtherProducts";
 
 export default function Massages() {
+
+  return (<div className="divider">
+      <MassagesContent />
+      <OtherProducts />
+    </div>);
+}
+
+function MassagesContent() {
 
   const CodCategoria = 2
 
