@@ -1,10 +1,21 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { DataContext } from "../../context/SpaContext";
 import useProducts from "../../hooks/useProducts";
 import Card from "../controls/Card";
 import Loading from "../controls/Loading";
+import OtherProducts from "./OtherProducts";
 
 export default function Facialtreatments() {
+
+  return (
+    <div className="divider">
+      <FacialtreatmentsContent />
+      <OtherProducts />
+    </div>
+  );
+}
+
+function FacialtreatmentsContent() {
 
   const { addCart } = useContext(DataContext);
   const [colapseId, setColapseId] = useState(0);

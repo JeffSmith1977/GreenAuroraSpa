@@ -1741,3 +1741,16 @@ section {
     text-decoration: line-through;
     color: #c1c1c1;
 }
+
+.divider {}
+
+.txt-white {
+    color: white;
+}
+
+.with-shadow {
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    margin-bottom: 20px;
+}

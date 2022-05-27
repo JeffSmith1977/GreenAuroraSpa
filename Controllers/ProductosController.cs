@@ -22,12 +22,13 @@ namespace GreenAuraSpa.Controllers
         [HttpGet("{action}")]
         public IActionResult Get(int CodCategoria)
         {
-           var productos = _context.Productos
-           .Include(x => x.PrecioProds) .Include(x => x.DescuentoProds).Where(y => y.IdCategoria==CodCategoria);
-           
-                       // .Include(x => x.Descueto).Where(y => y.IdDescuento==IdDescuento).ToArray();
+            
+            IQueryable<Producto> productos = _context.Productos.Include(x => x.PrecioProds).Include(x => x.DescuentoProds);
 
-           return new JsonResult(productos);
+            if (CodCategoria > 0)
+                productos = productos.Where(y => y.IdCategoria == CodCategoria);
+
+            return new JsonResult(productos);
         }
     }
 }

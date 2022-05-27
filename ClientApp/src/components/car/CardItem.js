@@ -5,6 +5,8 @@ const Carditem = ({items =[]}) => {
 
     const { removeCart } = useContext(DataContext);   
 
+    const total = items.reduce((acc, item) => acc + item.price, 0);
+
     return (
         <table style={{ width:'100%' }}>
             <thead>
