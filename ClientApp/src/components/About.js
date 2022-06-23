@@ -24,35 +24,16 @@ export default function About() {
 
         <div className="row">
           <div className="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/about.jpg" className="img-fluid" alt="" />
+            {/* <img src="../Images/portfolio/5.jpg" className="img-fluid" alt="" />            */}
+            <a href="../Images/portfolio/3.JPG" className="img-fluid" alt="" />
           </div>
           <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>
-              Voluptatem dignissimos provident quasi corporis voluptates sit
-              assumenda.
-            </h3>
             <p className="fst-italic">
               Spa treatments are available for guests ages 16 and over. Guests
               under the age of 16 must be accompanied by a parent or guardian.
               Spa Reservations A valid credit card is required to secure a spa
               reservation.
-            </p>
-            <ul>
-              <li>
-                <i className="bi bi-check-circled"></i> Ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
-              </li>
-              <li>
-                <i className="bi bi-check-circled"></i> Duis aute irure dolor in
-                reprehenderit in voluptate velit.
-              </li>
-              <li>
-                <i className="bi bi-check-circled"></i> Ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate trideta storacalaperda mastiro dolore
-                eu fugiat nulla pariatur.
-              </li>
-            </ul>
+            </p>            
             <h5>Medical & Well being:</h5>
             <p>
               Please inform us of any medical needs, physical conditions, or

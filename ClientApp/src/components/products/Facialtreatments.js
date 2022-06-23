@@ -32,8 +32,7 @@ export default function Facialtreatments() {
             loading ? 
 
             <Loading texto={'Cargando productos'} /> :
-
-            //productos.map((producto, index) => <Card key={index} product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} addCart={addCart} />) 
+           
             productos.map((producto, index) => <FacialtreatmentsCard key={index} product={producto} index={index} colapseId={colapseId} setColapseId={setColapseId} addCart={addCart} />)          
 
           }

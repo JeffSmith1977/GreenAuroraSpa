@@ -43,46 +43,6 @@ const Carditem = ({items =[]}) => {
                 <button className='btn btn-primary noradio'>Checkout</button>
             </div>
         </div>
-
-
-        // <table style={{ width:'100%' }}>
-        //     <thead>
-        //         <tr>
-        //             <th> 
-                       
-        //             </th>
-        //             <th>Product</th>
-        //             <th>Price</th>
-        //             <th>Qx</th>
-        //             <th>Total</th>
-        //         </tr>    
-
-        //     </thead>
-        //     <tbody>
-        //         {items.map(item => ( 
-        //             <tr key={item.idProducto}>
-        //                 <td> <button className='delete-item' onClick={() => removeCart(item.idProducto)}>
-        //                     <i className="bi bi-phone">
-        //                         <box-icon name='trash' ></box-icon>
-        //                     </i>
-        //                 </button></td>
-        //                 <td>{item.nombre}</td>
-        //                 <td>$ {round(item.precio)}</td>
-        //                 <td>{item.cantidad}</td>
-        //                 <td>$ {round(item.precio * item.cantidad)}</td>
-        //             </tr>
-
-        //         ))}
-        //     </tbody>
-            
-        //     <tfoot>
-        //         <tr>
-        //             <td></td>
-        //             <td>Total to pay:</td>
-        //             <td>$ {round(total)}</td>
-        //         </tr>                
-        //     </tfoot>
-        // </table>
     );
 }
 
