@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import NavigationList from './car/NavigationList';
 import { NavMenu } from './NavMenu';
 
-export class Layout extends Component {
-  static displayName = Layout.name;
-
-  render () {
+export const Layout = (props) =>{
     return (
       <div>
         <NavMenu />   
         <NavigationList />    
-          {this.props.children}       
+        {props.children}       
       </div>
     );
-  }
+  
 }

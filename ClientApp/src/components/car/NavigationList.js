@@ -17,8 +17,6 @@ const NavigationList = props => {
         }, 800);
     }
 
-    console.log(carts);
-
     return (
 
         <div className="list" style={{ width: '200px' }}>
