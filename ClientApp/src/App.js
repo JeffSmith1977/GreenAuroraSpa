@@ -15,6 +15,7 @@ import FacialWax from './components/products/FacialWax';
 import BodyWax from './components/products/BodyWax';
 import { Container } from 'reactstrap';
 import DataProvider from './context/SpaContext';
+import Checkout from './components/Checkout';
 
 export default class App extends Component {
   static displayName = App.name;   
@@ -23,7 +24,7 @@ export default class App extends Component {
     
     return (         
       <DataProvider>
-        <Layout>
+        <Layout >
           <Route exact path='/' component={Home} />
           <Route path='/counter' component={Counter} />
           <Route path='/products' component={props => <Container {...props}>{<Facialtreatments {...props}/>}</Container>} /> 
@@ -34,6 +35,7 @@ export default class App extends Component {
           <Route path='/Contact' component={Contact} />
           <Route path='/Portfolio' component={Portfolio} />
           <Route path='/fetch-data' component={FetchData} />
+          <Route path='/checkout' component={Checkout} />
         </Layout>
       </DataProvider>   
     );

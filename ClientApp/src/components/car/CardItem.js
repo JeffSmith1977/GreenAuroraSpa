@@ -1,12 +1,17 @@
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { DataContext } from '../../context/SpaContext';
-import { round } from '../../utils/common';
+import { getCart, round } from '../../utils/common';
 
 const Carditem = ({items =[]}) => {
 
     const { removeCart } = useContext(DataContext);   
 
-    const total=items.reduce((acumulado, actual)=>acumulado + (actual.precio * actual.cantidad), 0)
+    const { total } = getCart(items);
+
+    let history = useHistory();
+
+    const navegateTo = (url) => history.push({ pathname : '/checkout' });  
     
     return (
         <div>
@@ -40,9 +45,11 @@ const Carditem = ({items =[]}) => {
                 <div className='txt-bold'>${round(total)}</div>
             </div>
             <div className='d-flex-end'>
-                <button className='btn btn-primary noradio'>Checkout</button>
+                <button className='btn btn-primary noradio' onClick={navegateTo}>Checkout</button>
             </div>
         </div>
+
+
     );
 }
 
