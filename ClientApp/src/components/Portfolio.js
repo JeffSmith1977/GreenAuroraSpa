@@ -29,9 +29,7 @@ export default function Portfolio() {
           <div className="portfolio-wrap">
             <img className="card-img-top" src={require("../Images/portfolio/1.jpg").default}/> 
                      
-             <div className="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
+             <div className="portfolio-info">              
               <div className="portfolio-links">
                 <a
                   href="../Images/portfolio/1.jpg"
@@ -49,9 +47,7 @@ export default function Portfolio() {
         <div className="col-lg-4 col-md-6 portfolio-item filter-web">
           <div className="portfolio-wrap"> 
           <img className="card-img-top" src={require("../Images/portfolio/2.jpg").default}/> 
-            <div className="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
+            <div className="portfolio-info">              
               <div className="portfolio-links">
                 <a
                   href="../Images/portfolio/2.jpg"
@@ -66,16 +62,14 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div className="col-lg-4 col-md-6 portfolio-item filter-app">
           <div className="portfolio-wrap">
-            <img className="card-img-top" src={require("../Images/portfolio/3.jpg").default}/> 
+            <img className="card-img-top" src={require("../Images/portfolio/3.JPG").default}/> 
                      
-             <div className="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
+             <div className="portfolio-info">              
               <div className="portfolio-links">
                 <a
-                  href="../Images/portfolio/3.jpg"
+                  href="../Images/portfolio/3.JPG"
                   data-gallery="portfolioGallery"
                   className="portfolio-lightbox"
                   title="App 1"
@@ -85,14 +79,12 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
         <div className="col-lg-4 col-md-6 portfolio-item filter-card">
           <div className="portfolio-wrap">
           <img className="card-img-top" src={require("../Images/portfolio/4.JPG").default}/> 
-            <div className="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
+            <div className="portfolio-info">              
               <div class="portfolio-links">
                 <a
                   className="../Images/portfolio/4.jpg"
@@ -105,18 +97,14 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-
-
-{/* 
+ 
         <div className="col-lg-4 col-md-6 portfolio-item filter-app">
           <div className="portfolio-wrap"> 
-          <img className="card-img-top" src={require("../../Images/portfolio/3.jpg").default}/> 
-            <div className="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
+          <img className="card-img-top" src={require("../Images/portfolio/5.jpg").default}/> 
+            <div className="portfolio-info">              
               <div className="portfolio-links">
                 <a
-                  href="../../Images/portfolio/3.jpg"
+                  href="../Images/portfolio/5.jpg"
                   data-gallery="portfolioGallery"
                   className="portfolio-lightbox"
                   title="App 2"
@@ -130,13 +118,11 @@ export default function Portfolio() {
 
         <div className="col-lg-4 col-md-6 portfolio-item filter-card">
           <div className="portfolio-wrap">
-          <img className="card-img-top" src={require("../Images/portfolio/4.jpg").default}/> 
-            <div className="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+          <img className="card-img-top" src={require("../Images/portfolio/6.JPG").default}/> 
+            <div className="portfolio-info">              
               <div class="portfolio-links">
                 <a
-                  className="../Images/portfolio/4.jpg"
+                  className="../Images/portfolio/6.JPG"
                   data-gallery="portfolioGallery" 
                   title="Card 2"
                 >
@@ -149,13 +135,11 @@ export default function Portfolio() {
 
         <div className="col-lg-4 col-md-6 portfolio-item filter-web">
           <div className="portfolio-wrap">
-          <img className="card-img-top" src={require("../Images/portfolio/5.jpg").default}/> 
-            <div className="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
+          <img className="card-img-top" src={require("../Images/portfolio/7.jpg").default}/> 
+            <div className="portfolio-info">              
               <div className="portfolio-links">
                 <a
-                  href="../Images/portfolio/5.jpg"
+                  href="../Images/portfolio/7.jpg"
                   data-gallery="portfolioGallery"
                   className="portfolio-lightbox"
                   title="Web 1"
@@ -166,47 +150,7 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-
-        <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div className="portfolio-wrap">           
-          <img className="card-img-top" src={require("../Images/portfolio/6.jpg").default}/> 
-            <div clclassNameass="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <div className="portfolio-links">
-                <a
-                  href="../Images/portfolio/6.jpg"
-                  data-gallery="portfolioGallery"
-                  className="portfolio-lightbox"
-                  title="App 3"
-                >
-                  <i className="bx bx-plus"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div className="portfolio-wrap"> 
-          <img className="card-img-top" src={require("../Images/portfolio/7.jpg").default}/> 
-            <div className="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <div className="portfolio-links">
-                <a
-                  href="../Images/portfolio/7.jpg"
-                  data-gallery="portfolioGallery"
-                  className="portfolio-lightbox"
-                  title="Card 1"
-                >
-                  <i className="bx bx-plus"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
+        
       </div>
     </div>
   );
