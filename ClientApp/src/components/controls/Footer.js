@@ -6,10 +6,10 @@ export default function Footer() {
       <footer id="footer">
         <div className="container">
           <h3>Green Aura Spa</h3>
-          <p>
+          {/* <p>
             Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
             eligendi fuga maxime saepe commodi placeat.
-          </p>
+          </p> */}
           <div className="social-links">
             <a href="https://twitter.com/greenauraspa" className="twitter">
               <i className="bx bxl-twitter"></i>  

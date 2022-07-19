@@ -24,8 +24,13 @@ export default function About() {
 
         <div className="row">
           <div className="col-lg-6 order-1 order-lg-2">
-            {/* <img src="../Images/portfolio/5.jpg" className="img-fluid" alt="" />            */}
-            <a href="../Images/portfolio/3.JPG" className="img-fluid" alt="" />
+           
+            <img      
+            style={{ width: '500px', height: '500px' }}
+            className="card-img-top"
+            src={require(`../Images/about.png`).default}
+            alt="..."
+          />      
           </div>
           <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <p className="fst-italic">

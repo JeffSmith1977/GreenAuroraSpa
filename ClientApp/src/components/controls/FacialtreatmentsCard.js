@@ -26,10 +26,21 @@ const FacialtreatmentsCard = ( { index, product, colapseId, setColapseId } ) => 
           {nombre}
         </button>
       </h2>
+
+
+
+
+
       <div id="collapseOne" className={`accordion-collapse ${colapseId == index ? '' : 'collapse'}`} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div className="accordion-body">
           <div className="card-spa">
-            <img style={{ width: '100px', height: '100px' }} src="" alt="" />
+
+          <img style={{ width: '100px', height: '100px' }}
+            className="card-img-top"
+            src={require(`../../Images/facialTreatments/${idProducto}.png`).default}
+            alt="..."
+          />      
+              
             <div className="card-spa-content">
               <h4 className="card-spa-title">{nombre}
               </h4>

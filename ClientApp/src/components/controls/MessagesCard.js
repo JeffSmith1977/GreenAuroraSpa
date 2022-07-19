@@ -35,7 +35,7 @@ const MessagesCard = ({ producto }) => {
                             Discount {porcentaje}%
                         </div>
                     }
-                    <img
+                    <img style={{ width: '250px', height: '200px' }}
                         className="card-img-top"
                         src={require(`../../Images/${idProducto}.png`).default}
                         alt="..."
